@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataquality.analysis:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.indicators.sql="http://dataquality.indicators.sql" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010" xmi:id="_cFLAcWIYEeq7nbc21dJHKg" name="BusinessRuleAnalysis" creationDate="2020-03-09T16:12:49.138+0100">
+<dataquality.analysis:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.indicators.sql="http://dataquality.indicators.sql" xmlns:dataquality.rules="http://dataquality.rules" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010" xmi:id="_cFLAcWIYEeq7nbc21dJHKg" name="BusinessRuleAnalysis" creationDate="2020-03-09T16:12:49.138+0100">
   <clientDependency href="../../metadata/connections/Vertica_0.1.item#_jXWlsGH5Eeq7nbc21dJHKg"/>
   <clientDependency href="../../TDQ_Libraries/Rules/SQL/BusinessRuleA_0.1.rules#_cFLng2IYEeq7nbc21dJHKg"/>
   <taggedValue xmi:id="_cFLAcmIYEeq7nbc21dJHKg" tag="Status" value="development"/>
@@ -12,14 +12,30 @@
     <analysedElements xsi:type="relational:TdTable" href="../../metadata/connections/Vertica_0.1.item#_BOcxS2H6Eeq7nbc21dJHKg"/>
   </context>
   <results xmi:id="_cFLAeGIYEeq7nbc21dJHKg">
-    <resultMetadata xmi:id="_cFLAeWIYEeq7nbc21dJHKg"/>
-    <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_cFLAemIYEeq7nbc21dJHKg">
+    <resultMetadata xmi:id="_cFLAeWIYEeq7nbc21dJHKg" executionDate="2020-03-09T16:12:56.177+0100" executionDuration="1381" message="" executionNumber="1" lastRunOk="true" lastExecutionNumberOk="1"/>
+    <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_cFLAemIYEeq7nbc21dJHKg" count="1155" computed="true">
       <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/Vertica_0.1.item#_BOcxS2H6Eeq7nbc21dJHKg"/>
       <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+      <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_dIQ1IGIYEeq7nbc21dJHKg" body="SELECT COUNT(*) FROM &quot;tbi&quot;.&quot;public&quot;.&quot;employee&quot; " language="Vertica Database"/>
+      <builtInIndicatorDefinition xmi:id="_dINKwGIYEeq7nbc21dJHKg" name="Row Count" label="Row Count">
+        <taggedValue xmi:id="_dINKwWIYEeq7nbc21dJHKg" tag="Description" value="counts the number of rows"/>
+        <taggedValue xmi:id="_dINKwmIYEeq7nbc21dJHKg" tag="Purpose" value="evaluates the number of records"/>
+        <sqlGenericExpression xmi:id="_dINKw2IYEeq7nbc21dJHKg" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+      </builtInIndicatorDefinition>
     </indicators>
-    <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_cFLAe2IYEeq7nbc21dJHKg">
+    <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_cFLAe2IYEeq7nbc21dJHKg" count="1155" computed="true" userCount="0">
       <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/Vertica_0.1.item#_BOcxS2H6Eeq7nbc21dJHKg"/>
       <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/BusinessRuleA_0.1.rules#_QCWu0WIYEeq7nbc21dJHKg"/>
+      <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_dIQ1IWIYEeq7nbc21dJHKg" body="SELECT COUNT(*) FROM &quot;tbi&quot;.&quot;public&quot;.&quot;employee&quot;   WHERE (Hire_date&lt;End_date)" language="Vertica Database"/>
+      <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_dIO_8GIYEeq7nbc21dJHKg" name="BusinessRuleA" criticalityLevel="1" whereExpression="Hire_date&lt;End_date">
+        <taggedValue xmi:id="_dIO_8WIYEeq7nbc21dJHKg" tag="Status" value="development"/>
+        <taggedValue xmi:id="_dIO_8mIYEeq7nbc21dJHKg" tag="Author" value="nlegeay@tmc.at.aws.01.tcprtbd.r1910.talend.com"/>
+        <taggedValue xmi:id="_dIO_82IYEeq7nbc21dJHKg" tag="Purpose"/>
+        <taggedValue xmi:id="_dIO_9GIYEeq7nbc21dJHKg" tag="Description"/>
+        <taggedValue xmi:id="_dIO_9WIYEeq7nbc21dJHKg" tag="Version" value="0.1"/>
+        <taggedValue xmi:id="_dIO_9mIYEeq7nbc21dJHKg" tag="Validation_Status" value="true"/>
+        <sqlGenericExpression xmi:id="_dIO_92IYEeq7nbc21dJHKg" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+      </builtInIndicatorDefinition>
     </indicators>
   </results>
   <parameters xmi:id="_cFLAfGIYEeq7nbc21dJHKg" analysisType="Table Analysis"/>
