@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <dataquality.analysis:Analysis xmi:id="_F8IoYGH6Eeq7nbc21dJHKg" name="ColumnAnalysis" creationDate="2020-03-09T12:35:35.653+0100" defaultContext="Default">
+    <clientDependency href="../../metadata/connections/Vertica_0.1.item#_jXWlsGH5Eeq7nbc21dJHKg"/>
+    <taggedValue xmi:id="_F8IoYWH6Eeq7nbc21dJHKg" tag="Status" value="development"/>
+    <taggedValue xmi:id="_F8IoYmH6Eeq7nbc21dJHKg" tag="Author" value="nlegeay@tmc.at.aws.01.tcprtbd.r1910.talend.com"/>
+    <taggedValue xmi:id="_F8IoY2H6Eeq7nbc21dJHKg" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_F8IoZGH6Eeq7nbc21dJHKg" tag="Description" value=""/>
+    <taggedValue xmi:id="_F8IoZWH6Eeq7nbc21dJHKg" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_GDgbsWH6Eeq7nbc21dJHKg" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+    <taggedValue xmi:id="_GDgbsmH6Eeq7nbc21dJHKg" tag="PREVIEW_ROW_NUMBER" value="50"/>
+    <taggedValue xmi:id="_GDgbs2H6Eeq7nbc21dJHKg" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
+    <taggedValue xmi:id="_GDl7QGH6Eeq7nbc21dJHKg" tag="Is Use Sample Data" value="false"/>
+    <context xmi:id="_F8IoZmH6Eeq7nbc21dJHKg">
+      <connection href="../../metadata/connections/Vertica_0.1.item#_W6kKUGH4Eeq7nbc21dJHKg"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/Vertica_0.1.item#_Cz0zoGH6Eeq7nbc21dJHKg"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/Vertica_0.1.item#_Cz0zpGH6Eeq7nbc21dJHKg"/>
+    </context>
+    <results xmi:id="_F8IoZ2H6Eeq7nbc21dJHKg">
+      <resultMetadata xmi:id="_F8IoaGH6Eeq7nbc21dJHKg" executionDate="2020-03-09T12:36:08.438+0100" executionDuration="6146" message="" executionNumber="1" lastRunOk="true" lastExecutionNumberOk="1"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_GDhp0GH6Eeq7nbc21dJHKg" computed="true">
+        <parameters xmi:id="_GDhp0WH6Eeq7nbc21dJHKg"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/Vertica_0.1.item#_Cz0zoGH6Eeq7nbc21dJHKg"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_K0348GH6Eeq7nbc21dJHKg" body="SELECT COUNT(*) FROM &quot;public&quot;.&quot;company&quot; " language="Vertica Database"/>
+        <builtInIndicatorDefinition xmi:id="_K0HD8GH6Eeq7nbc21dJHKg" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_K0HD8WH6Eeq7nbc21dJHKg" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_K0HD8mH6Eeq7nbc21dJHKg" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_K0HD82H6Eeq7nbc21dJHKg" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_GDhp0mH6Eeq7nbc21dJHKg" computed="true">
+        <parameters xmi:id="_GDhp02H6Eeq7nbc21dJHKg"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/Vertica_0.1.item#_Cz0zoGH6Eeq7nbc21dJHKg"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_K0348mH6Eeq7nbc21dJHKg" body="SELECT COUNT(*) FROM &quot;public&quot;.&quot;company&quot; WHERE &quot;company_id&quot; IS NULL " language="Vertica Database"/>
+        <builtInIndicatorDefinition xmi:id="_K0L8cGH6Eeq7nbc21dJHKg" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_K0L8cWH6Eeq7nbc21dJHKg" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_K0L8cmH6Eeq7nbc21dJHKg" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_K0L8c2H6Eeq7nbc21dJHKg" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_GDhp1GH6Eeq7nbc21dJHKg" computed="true" distinctValueCount="0">
+        <parameters xmi:id="_GDhp1WH6Eeq7nbc21dJHKg"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/Vertica_0.1.item#_Cz0zoGH6Eeq7nbc21dJHKg"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_K03482H6Eeq7nbc21dJHKg" body="SELECT COUNT(*) FROM (SELECT DISTINCT &quot;company_id&quot; FROM &quot;public&quot;.&quot;company&quot; ) A" language="Vertica Database"/>
+        <builtInIndicatorDefinition xmi:id="_K0O_wGH6Eeq7nbc21dJHKg" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_K0Pm0GH6Eeq7nbc21dJHKg" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_K0Pm0WH6Eeq7nbc21dJHKg" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_K0Pm0mH6Eeq7nbc21dJHKg" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_GDhp1mH6Eeq7nbc21dJHKg" computed="true" uniqueValueCount="0">
+        <parameters xmi:id="_GDhp12H6Eeq7nbc21dJHKg"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/Vertica_0.1.item#_Cz0zoGH6Eeq7nbc21dJHKg"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_K04gAGH6Eeq7nbc21dJHKg" body="SELECT COUNT(*) FROM (SELECT &quot;company_id&quot;, COUNT(*) FROM &quot;public&quot;.&quot;company&quot;  GROUP BY &quot;company_id&quot; HAVING COUNT(*) = 1) AS myquery" language="Vertica Database"/>
+        <builtInIndicatorDefinition xmi:id="_K0SqIGH6Eeq7nbc21dJHKg" name="Unique Count" label="Unique Count">
+          <taggedValue xmi:id="_K0SqIWH6Eeq7nbc21dJHKg" tag="Description" value="counts the number of unique rows (i.e. distinct rows with only one instance: rows that are not duplicated)"/>
+          <taggedValue xmi:id="_K0SqImH6Eeq7nbc21dJHKg" tag="Purpose" value="evaluates the number of unique records"/>
+          <sqlGenericExpression xmi:id="_K0SqI2H6Eeq7nbc21dJHKg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_K0SqJGH6Eeq7nbc21dJHKg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_K0SqJWH6Eeq7nbc21dJHKg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_K0SqJmH6Eeq7nbc21dJHKg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_K0SqJ2H6Eeq7nbc21dJHKg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_K0SqKGH6Eeq7nbc21dJHKg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_K0SqKWH6Eeq7nbc21dJHKg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1)  myquery" language="Hive" version=""/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_GDhp2GH6Eeq7nbc21dJHKg" computed="true" duplicateValueCount="0">
+        <parameters xmi:id="_GDhp2WH6Eeq7nbc21dJHKg"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/Vertica_0.1.item#_Cz0zoGH6Eeq7nbc21dJHKg"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_K04gAWH6Eeq7nbc21dJHKg" body="SELECT COUNT(*) FROM (SELECT &quot;company_id&quot;, COUNT(*) FROM &quot;public&quot;.&quot;company&quot;  m  GROUP BY &quot;company_id&quot; HAVING COUNT(*) > 1) AS myquery" language="Vertica Database"/>
+        <builtInIndicatorDefinition xmi:id="_K0VtcGH6Eeq7nbc21dJHKg" name="Duplicate Count" label="Duplicate Count">
+          <taggedValue xmi:id="_K0VtcWH6Eeq7nbc21dJHKg" tag="Description" value="counts the number of duplicate rows. This number and the number of unique data equals the number of distinct rows"/>
+          <taggedValue xmi:id="_K0VtcmH6Eeq7nbc21dJHKg" tag="Purpose" value="evaluates the number of duplicated records"/>
+          <sqlGenericExpression xmi:id="_K0Vtc2H6Eeq7nbc21dJHKg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_K0VtdGH6Eeq7nbc21dJHKg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_K0VtdWH6Eeq7nbc21dJHKg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_K0VtdmH6Eeq7nbc21dJHKg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_K0Vtd2H6Eeq7nbc21dJHKg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_K0VteGH6Eeq7nbc21dJHKg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_K0VteWH6Eeq7nbc21dJHKg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:CountsIndicator" xmi:id="_GDhp22H6Eeq7nbc21dJHKg">
+        <parameters xmi:id="_GDhp3GH6Eeq7nbc21dJHKg"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/Vertica_0.1.item#_Cz0zpGH6Eeq7nbc21dJHKg"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Simple_Statistics_0.1.definition#_yb-Y4Dh8Ed2XmO7pl5Yuyg"/>
+        <blankCountIndicator xmi:id="_GDhp3WH6Eeq7nbc21dJHKg" computed="true">
+          <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/Vertica_0.1.item#_Cz0zpGH6Eeq7nbc21dJHKg"/>
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_K04gAmH6Eeq7nbc21dJHKg" body="SELECT COUNT(&quot;company_name&quot;) FROM &quot;public&quot;.&quot;company&quot; WHERE TRIM(&quot;company_name&quot;) = '' " language="Vertica Database"/>
+          <builtInIndicatorDefinition xmi:id="_K0dpQGH6Eeq7nbc21dJHKg" name="Blank Count" label="Blank Count">
+            <taggedValue xmi:id="_K0dpQWH6Eeq7nbc21dJHKg" tag="Description" value="counts the number of blank rows. A blank is a non null textual data that contains only white spaces (or nothing). Note that Oracle does not distinguish between the empty string and the null value"/>
+            <taggedValue xmi:id="_K0dpQmH6Eeq7nbc21dJHKg" tag="Purpose" value="evaluates the number of blank records"/>
+            <sqlGenericExpression xmi:id="_K0dpQ2H6Eeq7nbc21dJHKg" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+            <sqlGenericExpression xmi:id="_K0dpRGH6Eeq7nbc21dJHKg" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle"/>
+            <sqlGenericExpression xmi:id="_K0dpRWH6Eeq7nbc21dJHKg" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="DB2"/>
+            <sqlGenericExpression xmi:id="_K0dpRmH6Eeq7nbc21dJHKg" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="Microsoft SQL Server"/>
+            <sqlGenericExpression xmi:id="_K0dpR2H6Eeq7nbc21dJHKg" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> = '' or RTRIM(LTRIM(&lt;%=__COLUMN_NAMES__%>)) = '') &lt;%=__AND_WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          </builtInIndicatorDefinition>
+        </blankCountIndicator>
+        <RowCountIndicator xmi:id="_GDhp3mH6Eeq7nbc21dJHKg" computed="true">
+          <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/Vertica_0.1.item#_Cz0zpGH6Eeq7nbc21dJHKg"/>
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_K0348WH6Eeq7nbc21dJHKg" body="SELECT COUNT(*) FROM &quot;public&quot;.&quot;company&quot; " language="Vertica Database"/>
+          <builtInIndicatorDefinition xmi:id="_K0ZX0GH6Eeq7nbc21dJHKg" name="Row Count" label="Row Count">
+            <taggedValue xmi:id="_K0ZX0WH6Eeq7nbc21dJHKg" tag="Description" value="counts the number of rows"/>
+            <taggedValue xmi:id="_K0ZX0mH6Eeq7nbc21dJHKg" tag="Purpose" value="evaluates the number of records"/>
+            <sqlGenericExpression xmi:id="_K0ZX02H6Eeq7nbc21dJHKg" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+          </builtInIndicatorDefinition>
+        </RowCountIndicator>
+        <NullCountIndicator xmi:id="_GDhp32H6Eeq7nbc21dJHKg" computed="true">
+          <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/Vertica_0.1.item#_Cz0zpGH6Eeq7nbc21dJHKg"/>
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_K04gBWH6Eeq7nbc21dJHKg" body="SELECT COUNT(*) FROM &quot;public&quot;.&quot;company&quot; WHERE &quot;company_name&quot; IS NULL " language="Vertica Database"/>
+          <builtInIndicatorDefinition xmi:id="_K0oBUGH6Eeq7nbc21dJHKg" name="Null Count" label="Null Count">
+            <taggedValue xmi:id="_K0oBUWH6Eeq7nbc21dJHKg" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+            <taggedValue xmi:id="_K0oBUmH6Eeq7nbc21dJHKg" tag="Description" value="counts the number of null rows"/>
+            <sqlGenericExpression xmi:id="_K0oBU2H6Eeq7nbc21dJHKg" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+          </builtInIndicatorDefinition>
+        </NullCountIndicator>
+        <UniqueCountIndicator xmi:id="_GDhp4GH6Eeq7nbc21dJHKg" computed="true" uniqueValueCount="0">
+          <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/Vertica_0.1.item#_Cz0zpGH6Eeq7nbc21dJHKg"/>
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_K04gBmH6Eeq7nbc21dJHKg" body="SELECT COUNT(*) FROM (SELECT &quot;company_name&quot;, COUNT(*) FROM &quot;public&quot;.&quot;company&quot;  GROUP BY &quot;company_name&quot; HAVING COUNT(*) = 1) AS myquery" language="Vertica Database"/>
+          <builtInIndicatorDefinition xmi:id="_K0sSwGH6Eeq7nbc21dJHKg" name="Unique Count" label="Unique Count">
+            <taggedValue xmi:id="_K0sSwWH6Eeq7nbc21dJHKg" tag="Description" value="counts the number of unique rows (i.e. distinct rows with only one instance: rows that are not duplicated)"/>
+            <taggedValue xmi:id="_K0sSwmH6Eeq7nbc21dJHKg" tag="Purpose" value="evaluates the number of unique records"/>
+            <sqlGenericExpression xmi:id="_K0sSw2H6Eeq7nbc21dJHKg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="SQL"/>
+            <sqlGenericExpression xmi:id="_K0sSxGH6Eeq7nbc21dJHKg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="MySQL"/>
+            <sqlGenericExpression xmi:id="_K0sSxWH6Eeq7nbc21dJHKg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) myquery" language="Oracle"/>
+            <sqlGenericExpression xmi:id="_K0sSxmH6Eeq7nbc21dJHKg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="Teradata"/>
+            <sqlGenericExpression xmi:id="_K0sSx2H6Eeq7nbc21dJHKg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
+            <sqlGenericExpression xmi:id="_K0sSyGH6Eeq7nbc21dJHKg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+            <sqlGenericExpression xmi:id="_K0sSyWH6Eeq7nbc21dJHKg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1)  myquery" language="Hive" version=""/>
+          </builtInIndicatorDefinition>
+        </UniqueCountIndicator>
+        <distinctCountIndicator xmi:id="_GDhp4WH6Eeq7nbc21dJHKg" computed="true" distinctValueCount="0">
+          <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/Vertica_0.1.item#_Cz0zpGH6Eeq7nbc21dJHKg"/>
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_K04gA2H6Eeq7nbc21dJHKg" body="SELECT COUNT(*) FROM (SELECT DISTINCT &quot;company_name&quot; FROM &quot;public&quot;.&quot;company&quot; ) A" language="Vertica Database"/>
+          <builtInIndicatorDefinition xmi:id="_K0gskGH6Eeq7nbc21dJHKg" name="Distinct Count" label="Distinct Count">
+            <taggedValue xmi:id="_K0gskWH6Eeq7nbc21dJHKg" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+            <taggedValue xmi:id="_K0gskmH6Eeq7nbc21dJHKg" tag="Purpose" value="evaluates the number of distinct records"/>
+            <sqlGenericExpression xmi:id="_K0gsk2H6Eeq7nbc21dJHKg" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+          </builtInIndicatorDefinition>
+        </distinctCountIndicator>
+        <duplicateCountIndicator xmi:id="_GDhp4mH6Eeq7nbc21dJHKg" computed="true" duplicateValueCount="0">
+          <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/Vertica_0.1.item#_Cz0zpGH6Eeq7nbc21dJHKg"/>
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_K04gBGH6Eeq7nbc21dJHKg" body="SELECT COUNT(*) FROM (SELECT &quot;company_name&quot;, COUNT(*) FROM &quot;public&quot;.&quot;company&quot;  m  GROUP BY &quot;company_name&quot; HAVING COUNT(*) > 1) AS myquery" language="Vertica Database"/>
+          <builtInIndicatorDefinition xmi:id="_K0kW8GH6Eeq7nbc21dJHKg" name="Duplicate Count" label="Duplicate Count">
+            <taggedValue xmi:id="_K0kW8WH6Eeq7nbc21dJHKg" tag="Description" value="counts the number of duplicate rows. This number and the number of unique data equals the number of distinct rows"/>
+            <taggedValue xmi:id="_K0kW8mH6Eeq7nbc21dJHKg" tag="Purpose" value="evaluates the number of duplicated records"/>
+            <sqlGenericExpression xmi:id="_K0kW82H6Eeq7nbc21dJHKg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="SQL"/>
+            <sqlGenericExpression xmi:id="_K0kW9GH6Eeq7nbc21dJHKg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="MySQL"/>
+            <sqlGenericExpression xmi:id="_K0kW9WH6Eeq7nbc21dJHKg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Oracle"/>
+            <sqlGenericExpression xmi:id="_K0kW9mH6Eeq7nbc21dJHKg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="Teradata"/>
+            <sqlGenericExpression xmi:id="_K0kW92H6Eeq7nbc21dJHKg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
+            <sqlGenericExpression xmi:id="_K0kW-GH6Eeq7nbc21dJHKg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+            <sqlGenericExpression xmi:id="_K0kW-WH6Eeq7nbc21dJHKg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
+          </builtInIndicatorDefinition>
+        </duplicateCountIndicator>
+        <defaultValueIndicator xmi:id="_GDhp42H6Eeq7nbc21dJHKg" computed="true">
+          <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/Vertica_0.1.item#_Cz0zpGH6Eeq7nbc21dJHKg"/>
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Default_Value_Count_0.1.definition#_xnOs8O1MEd2L4a5zyMnylw"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_K-6lwGH6Eeq7nbc21dJHKg" body="SELECT COUNT(*) FROM &quot;public&quot;.&quot;company&quot;  WHERE (&quot;company_name&quot; = '')" language="Vertica Database"/>
+          <builtInIndicatorDefinition xmi:id="_K0v9IGH6Eeq7nbc21dJHKg" name="Default Value Count" label="Default Value Count">
+            <taggedValue xmi:id="_K0v9IWH6Eeq7nbc21dJHKg" tag="Description" value="counts the number of rows that are equal to the default value of the column"/>
+            <taggedValue xmi:id="_K0v9ImH6Eeq7nbc21dJHKg" tag="Purpose" value="evaluates the number of default values"/>
+            <sqlGenericExpression xmi:id="_K0v9I2H6Eeq7nbc21dJHKg" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+          </builtInIndicatorDefinition>
+        </defaultValueIndicator>
+      </indicators>
+    </results>
+    <parameters xmi:id="_F8IoaWH6Eeq7nbc21dJHKg" dataFilter="_GDl7QWH6Eeq7nbc21dJHKg" analysisType="Multiple Column Analysis"/>
+    <contextType xmi:id="_GDgbsGH6Eeq7nbc21dJHKg" confirmationNeeded="false" name="Default"/>
+  </dataquality.analysis:Analysis>
+  <dataquality.domain:Domain xmi:id="_GDl7QWH6Eeq7nbc21dJHKg" name="ColumnAnalysis">
+    <ranges xmi:id="_GDmiUGH6Eeq7nbc21dJHKg">
+      <expressions xmi:id="_GDmiUWH6Eeq7nbc21dJHKg">
+        <expression xsi:type="relational:TdExpression" xmi:id="_GDmiUmH6Eeq7nbc21dJHKg" body="" language="SQL"/>
+      </expressions>
+    </ranges>
+  </dataquality.domain:Domain>
+</xmi:XMI>
