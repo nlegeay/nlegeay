@@ -1,53 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataquality.analysis:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.indicators.schema="http://dataquality.indicators.schema" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore" xmi:id="_jXXMwWH5Eeq7nbc21dJHKg" name="GlobalAnalysis" creationDate="2020-03-09T12:31:43.624+0100">
-  <clientDependency href="../../metadata/connections/Vertica_0.1.item#_jXWlsGH5Eeq7nbc21dJHKg"/>
-  <taggedValue xmi:id="_jXXMwmH5Eeq7nbc21dJHKg" tag="Status" value="development"/>
-  <taggedValue xmi:id="_jXXMw2H5Eeq7nbc21dJHKg" tag="Author" value="nlegeay@tmc.at.aws.01.tcprtbd.r1910.talend.com"/>
-  <taggedValue xmi:id="_jXXMxGH5Eeq7nbc21dJHKg" tag="Purpose"/>
-  <taggedValue xmi:id="_jXXMxWH5Eeq7nbc21dJHKg" tag="Description" value="My global analysis."/>
-  <taggedValue xmi:id="_jXXMxmH5Eeq7nbc21dJHKg" tag="Version" value="0.1"/>
-  <context xmi:id="_jXXMx2H5Eeq7nbc21dJHKg">
-    <connection href="../../metadata/connections/Vertica_0.1.item#_W6kKUGH4Eeq7nbc21dJHKg"/>
-    <analysedElements xsi:type="TalendMetadata:DatabaseConnection" href="../../metadata/connections/Vertica_0.1.item#_W6kKUGH4Eeq7nbc21dJHKg"/>
-  </context>
-  <results xmi:id="_jXXMyGH5Eeq7nbc21dJHKg">
-    <resultMetadata xmi:id="_jXXMyWH5Eeq7nbc21dJHKg" executionDate="2020-03-09T12:31:50.903+0100" executionDuration="5203" message="" executionNumber="1" lastRunOk="true" lastExecutionNumberOk="1"/>
-    <indicators xsi:type="dataquality.indicators.schema:ConnectionIndicator" xmi:id="_jXXMymH5Eeq7nbc21dJHKg" computed="true" tableCount="8" keyCount="4" tableRowCount="577814" catalogCount="1">
-      <analyzedElement xsi:type="TalendMetadata:DatabaseConnection" href="../../metadata/connections/Vertica_0.1.item#_W6kKUGH4Eeq7nbc21dJHKg"/>
-      <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Overview/Connection_Overview_0.1.definition#_nZEo8MYSEd27NP4lvE0A4w"/>
-      <catalogIndicators xmi:id="_lOS5MGH5Eeq7nbc21dJHKg" tableCount="8" keyCount="4" tableRowCount="577814" schemaCount="1">
-        <analyzedElement xsi:type="orgomg.cwm.resource.relational:Catalog" href="../../metadata/connections/Vertica_0.1.item#_XZ5xsGH4Eeq7nbc21dJHKg"/>
-        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Overview/Catalog_Overview_0.1.definition#_QwDiwMYUEd27NP4lvE0A4w"/>
-        <schemaIndicators xmi:id="_lOS5MWH5Eeq7nbc21dJHKg" tableCount="8" keyCount="4" tableRowCount="577814">
-          <analyzedElement xsi:type="orgomg.cwm.resource.relational:Schema" href="../../metadata/connections/Vertica_0.1.item#_XZ5xsWH4Eeq7nbc21dJHKg"/>
-          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Overview/Schema_Overview_0.1.definition#_V4SA0MYUEd27NP4lvE0A4w"/>
-          <tableIndicators xmi:id="_lOS5MmH5Eeq7nbc21dJHKg" tableName="company" keyCount="1">
-            <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Overview/Table_Overview_0.1.definition#_hgO7YMYUEd27NP4lvE0A4w"/>
-          </tableIndicators>
-          <tableIndicators xmi:id="_lOS5M2H5Eeq7nbc21dJHKg" rowCount="3634" tableName="customer" keyCount="1">
-            <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Overview/Table_Overview_0.1.definition#_hgO7YMYUEd27NP4lvE0A4w"/>
-          </tableIndicators>
-          <tableIndicators xmi:id="_lOS5NGH5Eeq7nbc21dJHKg" rowCount="1238" tableName="customer_unique">
-            <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Overview/Table_Overview_0.1.definition#_hgO7YMYUEd27NP4lvE0A4w"/>
-          </tableIndicators>
-          <tableIndicators xmi:id="_lOS5NWH5Eeq7nbc21dJHKg" rowCount="1155" tableName="employee" keyCount="1">
-            <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Overview/Table_Overview_0.1.definition#_hgO7YMYUEd27NP4lvE0A4w"/>
-          </tableIndicators>
-          <tableIndicators xmi:id="_lOS5NmH5Eeq7nbc21dJHKg" rowCount="1054" tableName="employee_unique">
-            <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Overview/Table_Overview_0.1.definition#_hgO7YMYUEd27NP4lvE0A4w"/>
-          </tableIndicators>
-          <tableIndicators xmi:id="_lOS5N2H5Eeq7nbc21dJHKg" rowCount="636" tableName="product">
-            <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Overview/Table_Overview_0.1.definition#_hgO7YMYUEd27NP4lvE0A4w"/>
-          </tableIndicators>
-          <tableIndicators xmi:id="_lOS5OGH5Eeq7nbc21dJHKg" rowCount="2497" tableName="sales_fact">
-            <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Overview/Table_Overview_0.1.definition#_hgO7YMYUEd27NP4lvE0A4w"/>
-          </tableIndicators>
-          <tableIndicators xmi:id="_lOS5OWH5Eeq7nbc21dJHKg" rowCount="567600" tableName="speed" keyCount="1">
-            <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Overview/Table_Overview_0.1.definition#_hgO7YMYUEd27NP4lvE0A4w"/>
-          </tableIndicators>
-        </schemaIndicators>
-      </catalogIndicators>
-    </indicators>
-  </results>
-  <parameters xmi:id="_jXXMzWH5Eeq7nbc21dJHKg" analysisType="Connection Analysis"/>
-</dataquality.analysis:Analysis>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.domain.pattern="http://dataquality.domain.pattern" xmlns:dataquality.indicators.schema="http://dataquality.indicators.schema" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore">
+  <dataquality.analysis:Analysis xmi:id="_jXXMwWH5Eeq7nbc21dJHKg" name="GlobalAnalysis" creationDate="2020-03-09T12:31:43.624+0100" defaultContext="Default">
+    <clientDependency href="../../metadata/connections/Vertica_0.1.item#_jXWlsGH5Eeq7nbc21dJHKg"/>
+    <taggedValue xmi:id="_jXXMwmH5Eeq7nbc21dJHKg" tag="Status" value="development"/>
+    <taggedValue xmi:id="_jXXMw2H5Eeq7nbc21dJHKg" tag="Author" value="nlegeay@tmc.at.aws.01.tcprtbd.r1910.talend.com"/>
+    <taggedValue xmi:id="_jXXMxGH5Eeq7nbc21dJHKg" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_jXXMxWH5Eeq7nbc21dJHKg" tag="Description" value="My global analysis, first change."/>
+    <taggedValue xmi:id="_jXXMxmH5Eeq7nbc21dJHKg" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_GPj5sWIFEeq7nbc21dJHKg" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+    <taggedValue xmi:id="_GPj5smIFEeq7nbc21dJHKg" tag="Reload Databases" value="false"/>
+    <taggedValue xmi:id="_GPkgwGIFEeq7nbc21dJHKg" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
+    <context xmi:id="_jXXMx2H5Eeq7nbc21dJHKg">
+      <connection href="../../metadata/connections/Vertica_0.1.item#_W6kKUGH4Eeq7nbc21dJHKg"/>
+      <analysedElements xsi:type="TalendMetadata:DatabaseConnection" href="../../metadata/connections/Vertica_0.1.item#_W6kKUGH4Eeq7nbc21dJHKg"/>
+    </context>
+    <results xmi:id="_jXXMyGH5Eeq7nbc21dJHKg">
+      <resultMetadata xmi:id="_jXXMyWH5Eeq7nbc21dJHKg" executionDate="2020-03-09T12:31:50.903+0100" executionDuration="5203" message="" executionNumber="1" lastRunOk="true" lastExecutionNumberOk="1"/>
+      <indicators xsi:type="dataquality.indicators.schema:ConnectionIndicator" xmi:id="_jXXMymH5Eeq7nbc21dJHKg" computed="true" tableCount="8" keyCount="4" tableRowCount="577814" catalogCount="1">
+        <analyzedElement xsi:type="TalendMetadata:DatabaseConnection" href="../../metadata/connections/Vertica_0.1.item#_W6kKUGH4Eeq7nbc21dJHKg"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Overview/Connection_Overview_0.1.definition#_nZEo8MYSEd27NP4lvE0A4w"/>
+        <catalogIndicators xmi:id="_lOS5MGH5Eeq7nbc21dJHKg" tableCount="8" keyCount="4" tableRowCount="577814" schemaCount="1">
+          <analyzedElement xsi:type="orgomg.cwm.resource.relational:Catalog" href="../../metadata/connections/Vertica_0.1.item#_XZ5xsGH4Eeq7nbc21dJHKg"/>
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Overview/Catalog_Overview_0.1.definition#_QwDiwMYUEd27NP4lvE0A4w"/>
+          <schemaIndicators xmi:id="_lOS5MWH5Eeq7nbc21dJHKg" tableCount="8" keyCount="4" tableRowCount="577814">
+            <analyzedElement xsi:type="orgomg.cwm.resource.relational:Schema" href="../../metadata/connections/Vertica_0.1.item#_XZ5xsWH4Eeq7nbc21dJHKg"/>
+            <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Overview/Schema_Overview_0.1.definition#_V4SA0MYUEd27NP4lvE0A4w"/>
+            <tableIndicators xmi:id="_lOS5MmH5Eeq7nbc21dJHKg" tableName="company" keyCount="1">
+              <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Overview/Table_Overview_0.1.definition#_hgO7YMYUEd27NP4lvE0A4w"/>
+            </tableIndicators>
+            <tableIndicators xmi:id="_lOS5M2H5Eeq7nbc21dJHKg" rowCount="3634" tableName="customer" keyCount="1">
+              <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Overview/Table_Overview_0.1.definition#_hgO7YMYUEd27NP4lvE0A4w"/>
+            </tableIndicators>
+            <tableIndicators xmi:id="_lOS5NGH5Eeq7nbc21dJHKg" rowCount="1238" tableName="customer_unique">
+              <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Overview/Table_Overview_0.1.definition#_hgO7YMYUEd27NP4lvE0A4w"/>
+            </tableIndicators>
+            <tableIndicators xmi:id="_lOS5NWH5Eeq7nbc21dJHKg" rowCount="1155" tableName="employee" keyCount="1">
+              <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Overview/Table_Overview_0.1.definition#_hgO7YMYUEd27NP4lvE0A4w"/>
+            </tableIndicators>
+            <tableIndicators xmi:id="_lOS5NmH5Eeq7nbc21dJHKg" rowCount="1054" tableName="employee_unique">
+              <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Overview/Table_Overview_0.1.definition#_hgO7YMYUEd27NP4lvE0A4w"/>
+            </tableIndicators>
+            <tableIndicators xmi:id="_lOS5N2H5Eeq7nbc21dJHKg" rowCount="636" tableName="product">
+              <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Overview/Table_Overview_0.1.definition#_hgO7YMYUEd27NP4lvE0A4w"/>
+            </tableIndicators>
+            <tableIndicators xmi:id="_lOS5OGH5Eeq7nbc21dJHKg" rowCount="2497" tableName="sales_fact">
+              <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Overview/Table_Overview_0.1.definition#_hgO7YMYUEd27NP4lvE0A4w"/>
+            </tableIndicators>
+            <tableIndicators xmi:id="_lOS5OWH5Eeq7nbc21dJHKg" rowCount="567600" tableName="speed" keyCount="1">
+              <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Overview/Table_Overview_0.1.definition#_hgO7YMYUEd27NP4lvE0A4w"/>
+            </tableIndicators>
+          </schemaIndicators>
+        </catalogIndicators>
+      </indicators>
+    </results>
+    <parameters xmi:id="_jXXMzWH5Eeq7nbc21dJHKg" dataFilter="_GPkgwWIFEeq7nbc21dJHKg" analysisType="Connection Analysis"/>
+    <contextType xmi:id="_GPj5sGIFEeq7nbc21dJHKg" confirmationNeeded="false" name="Default"/>
+  </dataquality.analysis:Analysis>
+  <dataquality.domain:Domain xmi:id="_GPkgwWIFEeq7nbc21dJHKg" name="Analysis Data Filter" patterns="_GPkgwmIFEeq7nbc21dJHKg _GPkgxWIFEeq7nbc21dJHKg">
+    <ownedElement xsi:type="dataquality.domain.pattern:Pattern" xmi:id="_GPkgwmIFEeq7nbc21dJHKg" name="Table Pattern">
+      <components xsi:type="dataquality.domain.pattern:RegularExpression" xmi:id="_GPkgw2IFEeq7nbc21dJHKg">
+        <expression xmi:id="_GPkgxGIFEeq7nbc21dJHKg" body=""/>
+      </components>
+    </ownedElement>
+    <ownedElement xsi:type="dataquality.domain.pattern:Pattern" xmi:id="_GPkgxWIFEeq7nbc21dJHKg" name="View Pattern">
+      <components xsi:type="dataquality.domain.pattern:RegularExpression" xmi:id="_GPkgxmIFEeq7nbc21dJHKg">
+        <expression xmi:id="_GPkgx2IFEeq7nbc21dJHKg" body=""/>
+      </components>
+    </ownedElement>
+  </dataquality.domain:Domain>
+</xmi:XMI>
