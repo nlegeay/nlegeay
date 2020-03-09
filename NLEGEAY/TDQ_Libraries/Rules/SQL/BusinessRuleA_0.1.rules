@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataquality.rules:WhereRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.rules="http://dataquality.rules" xmi:id="_QCWu0WIYEeq7nbc21dJHKg" name="BusinessRuleA" criticalityLevel="1" whereExpression="Hire_date&lt;End_date">
+  <taggedValue xmi:id="_QCWu0mIYEeq7nbc21dJHKg" tag="Status" value="development"/>
+  <taggedValue xmi:id="_QCWu02IYEeq7nbc21dJHKg" tag="Author" value="nlegeay@tmc.at.aws.01.tcprtbd.r1910.talend.com"/>
+  <taggedValue xmi:id="_QCWu1GIYEeq7nbc21dJHKg" tag="Purpose"/>
+  <taggedValue xmi:id="_QCWu1WIYEeq7nbc21dJHKg" tag="Description"/>
+  <taggedValue xmi:id="_QCWu1mIYEeq7nbc21dJHKg" tag="Version" value="0.1"/>
+  <taggedValue xmi:id="_QCWu12IYEeq7nbc21dJHKg" tag="Validation_Status" value="true"/>
+  <categories href="../../.Talend.definition#_8i9eQBI5Ed6TWL6NwMMHzQ"/>
+  <sqlGenericExpression xmi:id="_QCWu2GIYEeq7nbc21dJHKg" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+</dataquality.rules:WhereRule>
