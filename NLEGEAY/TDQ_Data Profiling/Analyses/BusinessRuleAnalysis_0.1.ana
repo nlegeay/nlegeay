@@ -12,7 +12,7 @@
     <analysedElements xsi:type="relational:TdTable" href="../../metadata/connections/Vertica_0.1.item#_BOcxS2H6Eeq7nbc21dJHKg"/>
   </context>
   <results xmi:id="_0P0AhmINEeq1B-Xig2cRCw">
-    <resultMetadata xmi:id="_0P0Ah2INEeq1B-Xig2cRCw" executionDate="2020-03-09T14:57:18.271+0100" executionDuration="2236" message="Query not executed for indicator: &quot;businessRule&quot; SQL query: SELECT COUNT(*) FROM &quot;tbi&quot;.&quot;public&quot;.&quot;employee&quot;   WHERE (Begin_dt&lt;End_dt). Exception: [Vertica][VJDBC](2624) ERROR: Column &quot;Begin_dt&quot; does not exist" executionNumber="1"/>
+    <resultMetadata xmi:id="_0P0Ah2INEeq1B-Xig2cRCw" executionDate="2020-03-09T16:10:07.665+0100" executionDuration="1424" message="" executionNumber="2" lastRunOk="true" lastExecutionNumberOk="1"/>
     <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_0P0AiGINEeq1B-Xig2cRCw" count="1155" computed="true">
       <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/Vertica_0.1.item#_BOcxS2H6Eeq7nbc21dJHKg"/>
       <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
@@ -23,10 +23,10 @@
         <sqlGenericExpression xmi:id="_460XE2INEeq1B-Xig2cRCw" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
       </builtInIndicatorDefinition>
     </indicators>
-    <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_0P0AiWINEeq1B-Xig2cRCw" count="1155">
+    <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_0P0AiWINEeq1B-Xig2cRCw" count="1155" computed="true" userCount="0">
       <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/Vertica_0.1.item#_BOcxS2H6Eeq7nbc21dJHKg"/>
       <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/businessRule_0.1.rules#_KU2acGINEeq1B-Xig2cRCw"/>
-      <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_47j98WINEeq1B-Xig2cRCw" body="SELECT COUNT(*) FROM &quot;tbi&quot;.&quot;public&quot;.&quot;employee&quot;   WHERE (Begin_dt&lt;End_dt)" language="Vertica Database"/>
+      <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_47j98WINEeq1B-Xig2cRCw" body="SELECT COUNT(*) FROM &quot;tbi&quot;.&quot;public&quot;.&quot;employee&quot;   WHERE (Hire_date&lt;End_date)" language="Vertica Database"/>
       <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_47NYoGINEeq1B-Xig2cRCw" name="businessRule" criticalityLevel="1" whereExpression="Begin_dt&lt;End_dt">
         <taggedValue xmi:id="_47NYoWINEeq1B-Xig2cRCw" tag="Status" value="development"/>
         <taggedValue xmi:id="_47NYomINEeq1B-Xig2cRCw" tag="Author" value="bla20200309@tmc.at.aws.01.tcprtbd.r1910.talend.com"/>
