@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataquality.analysis:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.indicators.sql="http://dataquality.indicators.sql" xmlns:dataquality.rules="http://dataquality.rules" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010" xmi:id="_cFLAcWIYEeq7nbc21dJHKg" name="BusinessRuleAnalysis" creationDate="2020-03-09T16:12:49.138+0100">
   <clientDependency href="../../metadata/connections/Vertica_0.1.item#_jXWlsGH5Eeq7nbc21dJHKg"/>
-  <clientDependency href="../../TDQ_Libraries/Rules/SQL/BusinessRuleA_0.1.rules#_cFLng2IYEeq7nbc21dJHKg"/>
+  <clientDependency href="../../TDQ_Libraries/Rules/SQL/businessRule_0.1.rules#_cFLng2IYEeq7nbc21dJHKg"/>
   <taggedValue xmi:id="_cFLAcmIYEeq7nbc21dJHKg" tag="Status" value="development"/>
   <taggedValue xmi:id="_cFLAc2IYEeq7nbc21dJHKg" tag="Author" value="nlegeay@tmc.at.aws.01.tcprtbd.r1910.talend.com"/>
   <taggedValue xmi:id="_cFLAdGIYEeq7nbc21dJHKg" tag="Purpose"/>
@@ -25,7 +25,7 @@
     </indicators>
     <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_cFLAe2IYEeq7nbc21dJHKg" count="1155" computed="true" userCount="0">
       <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/Vertica_0.1.item#_BOcxS2H6Eeq7nbc21dJHKg"/>
-      <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/BusinessRuleA_0.1.rules#_QCWu0WIYEeq7nbc21dJHKg"/>
+      <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/businessRule_0.1.rules#_QCWu0WIYEeq7nbc21dJHKg"/>
       <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_dIQ1IWIYEeq7nbc21dJHKg" body="SELECT COUNT(*) FROM &quot;tbi&quot;.&quot;public&quot;.&quot;employee&quot;   WHERE (Hire_date&lt;End_date)" language="Vertica Database"/>
       <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_dIO_8GIYEeq7nbc21dJHKg" name="BusinessRuleA" criticalityLevel="1" whereExpression="Hire_date&lt;End_date">
         <taggedValue xmi:id="_dIO_8WIYEeq7nbc21dJHKg" tag="Status" value="development"/>
