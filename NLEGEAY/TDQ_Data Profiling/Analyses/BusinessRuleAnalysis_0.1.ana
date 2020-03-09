@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataquality.analysis:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.indicators.sql="http://dataquality.indicators.sql" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010" xmi:id="_0PzZcWINEeq1B-Xig2cRCw" name="BusinessRuleAnalysis" creationDate="2020-03-09T14:56:46.760+0100">
+<dataquality.analysis:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.indicators.sql="http://dataquality.indicators.sql" xmlns:dataquality.rules="http://dataquality.rules" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010" xmi:id="_0PzZcWINEeq1B-Xig2cRCw" name="BusinessRuleAnalysis" creationDate="2020-03-09T14:56:46.760+0100">
   <clientDependency href="../../metadata/connections/Vertica_0.1.item#_jXWlsGH5Eeq7nbc21dJHKg"/>
   <clientDependency href="../../TDQ_Libraries/Rules/SQL/businessRule_0.1.rules#_0P11sGINEeq1B-Xig2cRCw"/>
   <taggedValue xmi:id="_0P0AgGINEeq1B-Xig2cRCw" tag="Status" value="development"/>
@@ -12,14 +12,30 @@
     <analysedElements xsi:type="relational:TdTable" href="../../metadata/connections/Vertica_0.1.item#_BOcxS2H6Eeq7nbc21dJHKg"/>
   </context>
   <results xmi:id="_0P0AhmINEeq1B-Xig2cRCw">
-    <resultMetadata xmi:id="_0P0Ah2INEeq1B-Xig2cRCw"/>
-    <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_0P0AiGINEeq1B-Xig2cRCw">
+    <resultMetadata xmi:id="_0P0Ah2INEeq1B-Xig2cRCw" executionDate="2020-03-09T14:57:18.271+0100" executionDuration="2236" message="Query not executed for indicator: &quot;businessRule&quot; SQL query: SELECT COUNT(*) FROM &quot;tbi&quot;.&quot;public&quot;.&quot;employee&quot;   WHERE (Begin_dt&lt;End_dt). Exception: [Vertica][VJDBC](2624) ERROR: Column &quot;Begin_dt&quot; does not exist" executionNumber="1"/>
+    <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_0P0AiGINEeq1B-Xig2cRCw" count="1155" computed="true">
       <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/Vertica_0.1.item#_BOcxS2H6Eeq7nbc21dJHKg"/>
       <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+      <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_47j98GINEeq1B-Xig2cRCw" body="SELECT COUNT(*) FROM &quot;tbi&quot;.&quot;public&quot;.&quot;employee&quot; " language="Vertica Database"/>
+      <builtInIndicatorDefinition xmi:id="_460XEGINEeq1B-Xig2cRCw" name="Row Count" label="Row Count">
+        <taggedValue xmi:id="_460XEWINEeq1B-Xig2cRCw" tag="Description" value="counts the number of rows"/>
+        <taggedValue xmi:id="_460XEmINEeq1B-Xig2cRCw" tag="Purpose" value="evaluates the number of records"/>
+        <sqlGenericExpression xmi:id="_460XE2INEeq1B-Xig2cRCw" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+      </builtInIndicatorDefinition>
     </indicators>
-    <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_0P0AiWINEeq1B-Xig2cRCw">
+    <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_0P0AiWINEeq1B-Xig2cRCw" count="1155">
       <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/Vertica_0.1.item#_BOcxS2H6Eeq7nbc21dJHKg"/>
       <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/businessRule_0.1.rules#_KU2acGINEeq1B-Xig2cRCw"/>
+      <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_47j98WINEeq1B-Xig2cRCw" body="SELECT COUNT(*) FROM &quot;tbi&quot;.&quot;public&quot;.&quot;employee&quot;   WHERE (Begin_dt&lt;End_dt)" language="Vertica Database"/>
+      <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_47NYoGINEeq1B-Xig2cRCw" name="businessRule" criticalityLevel="1" whereExpression="Begin_dt&lt;End_dt">
+        <taggedValue xmi:id="_47NYoWINEeq1B-Xig2cRCw" tag="Status" value="development"/>
+        <taggedValue xmi:id="_47NYomINEeq1B-Xig2cRCw" tag="Author" value="bla20200309@tmc.at.aws.01.tcprtbd.r1910.talend.com"/>
+        <taggedValue xmi:id="_47NYo2INEeq1B-Xig2cRCw" tag="Purpose"/>
+        <taggedValue xmi:id="_47NYpGINEeq1B-Xig2cRCw" tag="Description"/>
+        <taggedValue xmi:id="_47NYpWINEeq1B-Xig2cRCw" tag="Version" value="0.1"/>
+        <taggedValue xmi:id="_47NYpmINEeq1B-Xig2cRCw" tag="Validation_Status" value="true"/>
+        <sqlGenericExpression xmi:id="_47NYp2INEeq1B-Xig2cRCw" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+      </builtInIndicatorDefinition>
     </indicators>
   </results>
   <parameters xmi:id="_0P0AimINEeq1B-Xig2cRCw" analysisType="Table Analysis"/>
