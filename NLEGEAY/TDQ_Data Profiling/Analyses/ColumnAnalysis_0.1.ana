@@ -1,13 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataquality.analysis:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.analysis="http://dataquality.analysis" xmi:id="_F8IoYGH6Eeq7nbc21dJHKg" name="ColumnAnalysis" creationDate="2020-03-09T12:35:35.653+0100">
-  <taggedValue xmi:id="_F8IoYWH6Eeq7nbc21dJHKg" tag="Status" value="development"/>
-  <taggedValue xmi:id="_F8IoYmH6Eeq7nbc21dJHKg" tag="Author" value="nlegeay@tmc.at.aws.01.tcprtbd.r1910.talend.com"/>
-  <taggedValue xmi:id="_F8IoY2H6Eeq7nbc21dJHKg" tag="Purpose"/>
-  <taggedValue xmi:id="_F8IoZGH6Eeq7nbc21dJHKg" tag="Description"/>
-  <taggedValue xmi:id="_F8IoZWH6Eeq7nbc21dJHKg" tag="Version" value="0.1"/>
-  <context xmi:id="_F8IoZmH6Eeq7nbc21dJHKg"/>
-  <results xmi:id="_F8IoZ2H6Eeq7nbc21dJHKg">
-    <resultMetadata xmi:id="_F8IoaGH6Eeq7nbc21dJHKg"/>
-  </results>
-  <parameters xmi:id="_F8IoaWH6Eeq7nbc21dJHKg" analysisType="Multiple Column Analysis"/>
-</dataquality.analysis:Analysis>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <dataquality.analysis:Analysis xmi:id="_F8IoYGH6Eeq7nbc21dJHKg" name="ColumnAnalysis" creationDate="2020-03-09T12:35:35.653+0100" defaultContext="Default">
+    <clientDependency href="../../metadata/connections/Vertica_0.1.item#_jXWlsGH5Eeq7nbc21dJHKg"/>
+    <taggedValue xmi:id="_F8IoYWH6Eeq7nbc21dJHKg" tag="Status" value="development"/>
+    <taggedValue xmi:id="_F8IoYmH6Eeq7nbc21dJHKg" tag="Author" value="nlegeay@tmc.at.aws.01.tcprtbd.r1910.talend.com"/>
+    <taggedValue xmi:id="_F8IoY2H6Eeq7nbc21dJHKg" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_F8IoZGH6Eeq7nbc21dJHKg" tag="Description" value=""/>
+    <taggedValue xmi:id="_F8IoZWH6Eeq7nbc21dJHKg" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_GDgbsWH6Eeq7nbc21dJHKg" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+    <taggedValue xmi:id="_GDgbsmH6Eeq7nbc21dJHKg" tag="PREVIEW_ROW_NUMBER" value="50"/>
+    <taggedValue xmi:id="_GDgbs2H6Eeq7nbc21dJHKg" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
+    <taggedValue xmi:id="_GDl7QGH6Eeq7nbc21dJHKg" tag="Is Use Sample Data" value="false"/>
+    <context xmi:id="_F8IoZmH6Eeq7nbc21dJHKg">
+      <connection href="../../metadata/connections/Vertica_0.1.item#_W6kKUGH4Eeq7nbc21dJHKg"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/Vertica_0.1.item#_Cz0zoGH6Eeq7nbc21dJHKg"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/Vertica_0.1.item#_Cz0zpGH6Eeq7nbc21dJHKg"/>
+    </context>
+    <results xmi:id="_F8IoZ2H6Eeq7nbc21dJHKg">
+      <resultMetadata xmi:id="_F8IoaGH6Eeq7nbc21dJHKg"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_GDhp0GH6Eeq7nbc21dJHKg">
+        <parameters xmi:id="_GDhp0WH6Eeq7nbc21dJHKg"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/Vertica_0.1.item#_Cz0zoGH6Eeq7nbc21dJHKg"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_GDhp0mH6Eeq7nbc21dJHKg">
+        <parameters xmi:id="_GDhp02H6Eeq7nbc21dJHKg"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/Vertica_0.1.item#_Cz0zoGH6Eeq7nbc21dJHKg"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_GDhp1GH6Eeq7nbc21dJHKg">
+        <parameters xmi:id="_GDhp1WH6Eeq7nbc21dJHKg"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/Vertica_0.1.item#_Cz0zoGH6Eeq7nbc21dJHKg"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_GDhp1mH6Eeq7nbc21dJHKg">
+        <parameters xmi:id="_GDhp12H6Eeq7nbc21dJHKg"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/Vertica_0.1.item#_Cz0zoGH6Eeq7nbc21dJHKg"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_GDhp2GH6Eeq7nbc21dJHKg">
+        <parameters xmi:id="_GDhp2WH6Eeq7nbc21dJHKg"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/Vertica_0.1.item#_Cz0zoGH6Eeq7nbc21dJHKg"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:CountsIndicator" xmi:id="_GDhp22H6Eeq7nbc21dJHKg">
+        <parameters xmi:id="_GDhp3GH6Eeq7nbc21dJHKg"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/Vertica_0.1.item#_Cz0zpGH6Eeq7nbc21dJHKg"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Simple_Statistics_0.1.definition#_yb-Y4Dh8Ed2XmO7pl5Yuyg"/>
+        <blankCountIndicator xmi:id="_GDhp3WH6Eeq7nbc21dJHKg">
+          <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/Vertica_0.1.item#_Cz0zpGH6Eeq7nbc21dJHKg"/>
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
+        </blankCountIndicator>
+        <RowCountIndicator xmi:id="_GDhp3mH6Eeq7nbc21dJHKg">
+          <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/Vertica_0.1.item#_Cz0zpGH6Eeq7nbc21dJHKg"/>
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        </RowCountIndicator>
+        <NullCountIndicator xmi:id="_GDhp32H6Eeq7nbc21dJHKg">
+          <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/Vertica_0.1.item#_Cz0zpGH6Eeq7nbc21dJHKg"/>
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        </NullCountIndicator>
+        <UniqueCountIndicator xmi:id="_GDhp4GH6Eeq7nbc21dJHKg">
+          <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/Vertica_0.1.item#_Cz0zpGH6Eeq7nbc21dJHKg"/>
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
+        </UniqueCountIndicator>
+        <distinctCountIndicator xmi:id="_GDhp4WH6Eeq7nbc21dJHKg">
+          <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/Vertica_0.1.item#_Cz0zpGH6Eeq7nbc21dJHKg"/>
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        </distinctCountIndicator>
+        <duplicateCountIndicator xmi:id="_GDhp4mH6Eeq7nbc21dJHKg">
+          <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/Vertica_0.1.item#_Cz0zpGH6Eeq7nbc21dJHKg"/>
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
+        </duplicateCountIndicator>
+        <defaultValueIndicator xmi:id="_GDhp42H6Eeq7nbc21dJHKg">
+          <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/Vertica_0.1.item#_Cz0zpGH6Eeq7nbc21dJHKg"/>
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Default_Value_Count_0.1.definition#_xnOs8O1MEd2L4a5zyMnylw"/>
+        </defaultValueIndicator>
+      </indicators>
+    </results>
+    <parameters xmi:id="_F8IoaWH6Eeq7nbc21dJHKg" dataFilter="_GDl7QWH6Eeq7nbc21dJHKg" analysisType="Multiple Column Analysis"/>
+    <contextType xmi:id="_GDgbsGH6Eeq7nbc21dJHKg" confirmationNeeded="false" name="Default"/>
+  </dataquality.analysis:Analysis>
+  <dataquality.domain:Domain xmi:id="_GDl7QWH6Eeq7nbc21dJHKg" name="ColumnAnalysis">
+    <ranges xmi:id="_GDmiUGH6Eeq7nbc21dJHKg">
+      <expressions xmi:id="_GDmiUWH6Eeq7nbc21dJHKg">
+        <expression xsi:type="relational:TdExpression" xmi:id="_GDmiUmH6Eeq7nbc21dJHKg" body="" language="SQL"/>
+      </expressions>
+    </ranges>
+  </dataquality.domain:Domain>
+</xmi:XMI>
